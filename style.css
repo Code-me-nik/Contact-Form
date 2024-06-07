@@ -1,164 +1,112 @@
-body{
-  margin:0;
-  padding:0;
-  background-color: rgba(38, 37, 37, 0.766) ;
-  font-family: 'Indie Flower', cursive;  
-}
-.mainsection{
-  height:650px;
-  overflow: hidden;
-  position: relative;
-}
-nav{
-  display: grid ;
-  grid-template-columns: 15% 35%;
-  justify-content: space-between ;
-  align-items: center ;
-  height:80px;
-}
-.icondiv{
-  display: flex ;
-  justify-content: space-evenly ;
-  align-items: center ;
-  padding-left:20px;
-}
-h3{
-  font-size:25px; 
-  color:#dedbdbd4;
-  text-transform: capitalize;
-}
-.navicon{
-  width:60px;
-  height:60px;
-}
-.navitems{
-  display: flex;
-  justify-content: space-evenly ;
-}
-.navitems a{
-  color:#dedbdbd4;
-  text-decoration: none ;
-  font-size:23px;
-  width:200px;
-  height: 40px;
+body {
+  background: linear-gradient(-90deg, #C4CECE, #A4A9B2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+section {
+  font-family: "Inter", sans-serif;
+  height: 500px;
+  width: 400px;
   border-radius: 20px;
-  font-weight: bold ;
-}
-.navitems a:hover{
-  background-color: black ;
-  color:#dedbdbd4;
-}
-.folder{
-  display: grid ;
-  grid-template-columns:30% 25%;
-  height:550px;
-  justify-content: space-evenly;
-  align-items: center ;
-  position: relative ;
-}
-.guider{
-  width: 150px;
-  height:30px;
-  position: absolute;
-  left:50px;
-  top:150px;
-  color:white;
-  font-size:20px;
-  display: flex;
-  justify-content: center ;
-  align-items: center ;
-}
-.emailarea{
-  height:560px;
-  width:400px;  
-  display: grid ;
-  grid-template-columns: repeat( 3 , 33.3% ) ;
-  grid-template-rows:40px 40px auto 40px;
-  font-size:35px;
-  position: absolute ;
-  left:250px;
-  display: none;
-  background-color: white;
-}
-.toinput{
-  grid-column:1/4;
-}
-.subjinput{
-  grid-column:1/4;
-}
-.emailpage{
-  grid-column:1/4;
-}
-.sendbtn{
-  grid-column: 1/4;
-  display: flex ;
-  justify-content: end ;
-}
-input , textarea{
-  padding:10px;
-  border:0;
-  font-family: 'Indie Flower', cursive;
-}
-textarea{
-  line-height: 19px;
-  text-align: start ;
-}
-.sendbtn button{
-  height:35px;
-  width:100px;
-  background-color: white ;
-  border:1px solid black;
-  border-radius:5px;
-  cursor: pointer;
+  background-color: #EBEBEE;
+  overflow: hidden;
+  margin-top: 70px;
+  box-shadow: -25px 25px 40px 0px #7B7C8B,
+    15px -25px 50px 10px #eeeeeeb7;
 }
 
-.heading{
-  color:#dedbdbd4;
-  font-size:29px;
+.form-elements {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: repeat(4, 35px) auto 80px;
+  justify-content: center;
+  grid-gap: 23px;
+  font-size: 23px;
 }
-.subheading{
-  color:#dedbdbd4;
-  font-size:22px;
-  text-overflow:initial;
-}
-.number , .name{
-  color:white;
-  font-weight: bold ;
-  letter-spacing: 2px;
-}
-.contactdetails a{
-  color:white;
-  text-decoration: none ;
+
+h2 {
+  width: 100%;
+  height: 70px;
   display: flex;
   align-items: center;
-  letter-spacing: 2px;
-}
-i{
-  padding:10px;
-}
-.emailarea{
-  animation: openfolder .5s alternate;
+  padding-left: 30px;
+  border-radius: 0 0 40% 40%;
+  background-color: #FEFFFE;
+  margin: 0px 0 0 -5px;
+
 }
 
-@keyframes openfolder{
-  from{
-    transform:translateY(-40px);
-     opacity:0;
-    }
-    to{
-     opacity:1;
-    transform:translateY(0px);
-  }
+h5 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  margin: 0;
+  height: 40px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
 }
 
-.bgimg{
-  width:300px;
-  rotate: -25deg;
-  height:500px;
-  position:absolute;
-  bottom:-120px;
-  right:10px;
+.name {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.email {
+  grid-column: 1/3;
+  grid-row: 3/4;
+}
+
+.subject {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+
+.message {
+  grid-column: 1/3;
+  grid-row: 5/7;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+  height: 100px;
+  width: 90%;
+}
+
+.all-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-column: 1/3;
+  grid-row: 7/8;
+}
+
+.light-button {
+  cursor: pointer;
+  background-color: #FEFFFE;
+}
+
+.dark-button {
+  cursor: pointer;
+  background-color: #2E2D43;
+  color: #FEFFFE;
+}
+
+/* this are the common formattings which is applied on most of the tags */
+.c-shadow {
+  box-shadow: -5px 5px 15px rgba(78, 78, 78, 0.479);
+}
+
+.c-formatting {
+  padding-left: 20px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.c-button-format {
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  border: 0;
 }

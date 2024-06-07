@@ -17,112 +17,35 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
 
-  <section class="mainsection">
-    <nav>
-      <div class="icondiv">
-        <img src="items/Picture1.png" class="navicon" alt="boy icon">
-        <h3> send it </h3>
-      </div>
-      <div class="navitems">
-        <a href="#"><i class="fa-solid fa-house"></i></a>
-        <a href="#">Apps</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+  <section class="container">
 
-    <section class="folder">
-      <img src="items/closed-folder.png" class="foldericon" alt="folder" title="click to open it">
-      <p class="guider"> click here !
-        <i class="fa-solid fa-angle-right"></i>
-      </p>
-      <div class="emailarea">
-        <input type="text" placeholder="[Recipient's email address]" class="toinput">
-        <input type="text" placeholder="Subject: Proposal for [Project Name]" class="subjinput">
-        <textarea class="emailpage" type="text/css">
-        Dear [Recipient's Name],
-        
-        I hope this email finds you well. I am writing to discuss the proposal for the upcoming [Project Name]. 
-        
-        In the attached document, you will find a detailed breakdown of the scope, timeline, and cost estimates. We believe that our proposed approach aligns perfectly with your project requirements and goals.
-        
-        Key Points:
-        - [Point 1]
-        - [Point 2]
-        - [Point 3]
-        
-        Please review the attached proposal at your convenience. I am available for a follow-up discussion or to address any questions you may have.
-      </textarea>
-        <div class="sendbtn">
-          <button type="button"> send <i class="fa-solid fa-caret-right"></i></button>
-        </div>
+    <h2> Contact Form </h2>
+
+    <div class="form-elements">
+
+      <h5> contact us </h5>
+
+      <input type="text" class="name c-formatting c-shadow" placeholder="Name">
+      <input type="email" class="email c-formatting c-shadow" placeholder="Email">
+      <input type="text" class="subject c-formatting c-shadow" placeholder="Subject">
+      <textarea id="message" name="message" class="message c-formatting c-shadow"
+        placeholder="Write your message here"></textarea>
+
+      <div class="all-buttons">
+        <button type="button" class="c-button-format c-shadow light-button"> cancel </button>
+        <button type="button" class="c-button-format c-shadow dark-button"> send email </button>
       </div>
+    </div>
 
-
-      <div class="contactdetails">
-        <h2 class="heading"> contact us </h2>
-        <p class="subheading">
-          Nurturing Success Empowering Growth through Feedback and Future Collaborations .
-        </p>
-        <p class="number">
-          <i class="fa-solid fa-mobile-screen"></i>
-          +91 2840385730
-        </p>
-        <p class="name">
-          <i class="fa-solid fa-user-large"></i>
-          more nikhil
-        </p>
-        <h2 class="heading"> follow us </h2>
-        <p class="subheading">follow us to be always up to date
-        </p>
-        <a href="#">
-          <i class="fa-brands fa-linkedin-in"></i> linkedin
-        </a>
-        <a href="https://github.com/Code-me-nik">
-          <i class="fa-brands fa-github"></i> github
-        </a>
-
-      </div>
-      <img src="items/tenticals.svg" class="bgimg" alt="octopus legs">
-    </section>
   </section>
 
-  <script>
-
-    let img = document.querySelector('.foldericon')
-    let textarea = document.querySelector('.emailarea')
-    let btn = document.querySelector('.sendbtn')
-    let i = 0;
-
-    // on folder click email area text area is open when we and then on btn click that email goes to given email address
-    img.addEventListener('click', () => {
-      if (i < 1) {
-        textarea.style.display = 'grid'
-        img.src = 'items/open-folder.png'
-        i++
-      }
-      i = 0
-    })
-
-    btn.addEventListener('click', () => {
-      img.src = 'items/closed-folder.png'
-      textarea.style.display = 'none'
-    })
-
-
-
-
-
-
-  </script>
 </body>
 
 </html>
